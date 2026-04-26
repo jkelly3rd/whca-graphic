@@ -15,8 +15,8 @@
 }
 body{font-family:var(--f);background:var(--bg);color:var(--ink);height:100vh;display:flex;flex-direction:column;overflow:hidden;}
 header{padding:11px 22px 9px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--surface);flex-shrink:0;}
-.h-title{font-size:19px;font-weight:600;letter-spacing:-0.005em;}
-.h-sub{font-size:11px;color:var(--ink3);margin-top:3px;letter-spacing:0.05em;text-transform:uppercase;}
+.h-title{font-size:22px;font-weight:600;letter-spacing:-0.005em;}
+.h-sub{font-size:12.5px;color:var(--ink3);margin-top:3px;letter-spacing:0.05em;text-transform:uppercase;}
 .h-r{display:flex;align-items:center;gap:5px;}
 .btn{font-family:var(--f);font-size:9px;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--border2);background:transparent;color:var(--ink2);cursor:pointer;border-radius:3px;}
 .btn:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
@@ -52,7 +52,7 @@ svg{display:block;width:100%;height:100%;}
 <header>
   <div>
     <div class="h-title">Where top officials were seated at WHCA Dinner 2026</div>
-    <div class="h-sub">Washington Hilton — International Ballroom · April 25, 2026<br>Click on blue and red dots below for detail about each official.</div>
+    <div class="h-sub">Washington Hilton — International Ballroom · April 25, 2026<br>Click on <span style="color:#1a3356;font-weight:700;">blue</span> and <span style="color:#8c1c1c;font-weight:700;">red</span> dots below for detail about each official.</div>
   </div>
   <div class="h-r">
     <button class="btn" onclick="resetV()">Reset</button>
@@ -100,7 +100,7 @@ svg{display:block;width:100%;height:100%;}
   <circle cx="329.2" cy="147.0" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="403.6" cy="152.8" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="436.2" cy="152.0" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
-  <circle cx="470.7" cy="152.0" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
+  <circle cx="470.7" cy="152.0" r="8" data-t="65" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="608.5" cy="151.1" r="8" data-t="112" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="643.8" cy="151.1" r="8" data-t="113" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="677.4" cy="150.3" r="8" data-t="135" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
@@ -117,7 +117,7 @@ svg{display:block;width:100%;height:100%;}
   <circle cx="375.5" cy="181.2" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="404.5" cy="182.9" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="437.1" cy="182.9" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
-  <circle cx="470.7" cy="182.9" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
+  <circle cx="470.7" cy="182.9" r="8" data-t="66" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="608.5" cy="182.9" r="8" data-t="111" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="642.9" cy="182.0" r="8" data-t="114" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="677.4" cy="180.4" r="8" data-t="134" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
@@ -133,7 +133,7 @@ svg{display:block;width:100%;height:100%;}
   <circle cx="372.7" cy="217.1" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="402.7" cy="213.8" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="436.2" cy="213.8" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
-  <circle cx="470.7" cy="213.0" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
+  <circle cx="470.7" cy="213.0" r="8" data-t="67" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="504.2" cy="213.0" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="574.0" cy="212.1" r="8" data-t="91" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="609.4" cy="213.0" r="8" data-t="110" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
@@ -226,7 +226,7 @@ svg{display:block;width:100%;height:100%;}
   <circle cx="372.7" cy="336.6" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="403.6" cy="332.5" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="438.0" cy="332.5" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
-  <circle cx="471.6" cy="331.6" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
+  <circle cx="471.6" cy="331.6" r="8" data-t="71" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="504.2" cy="332.5" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="574.9" cy="331.6" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
   <circle cx="610.3" cy="331.6" r="8" fill="#f5f3ee" stroke="#9a958a" stroke-width="0.85"/>
