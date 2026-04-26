@@ -596,7 +596,7 @@ function fitDots() {
   const baseOffsetX = (containerW - svgW * baseScale) / 2;
   const baseOffsetY = (containerH - svgH * baseScale) / 2;
   const seats = DIG;
-  const pad = 50;
+  const pad = 90;
   const minX = Math.min(...seats.map(d => d.px)) - pad;
   const maxX = Math.max(...seats.map(d => d.px)) + pad;
   const minY = Math.min(...seats.map(d => d.py)) - pad;
