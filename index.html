@@ -514,13 +514,69 @@ function closePanel() {
 }
 
 let sc=1,tx=0,ty=0,dr=false,lx=0,ly=0;
+
+function getMinSc() {
+  const cw = document.getElementById('cw');
+  const cW = cw.clientWidth, cH = cw.clientHeight;
+  const base = Math.min(cW/1100, cH/700);
+  const offX = (cW - 1100*base)/2, offY = (cH - 700*base)/2;
+  // Outer ellipse bounds in SVG coords + 24px padding
+  const pad = 24;
+  const lc = offX + (73.5-pad)*base,  rc = offX + (1025.5+pad)*base;
+  const tc = offY + (68.4-pad)*base,  bc = offY + (630.8+pad)*base;
+  return Math.min(cW/(rc-lc), cH/(bc-tc));
+}
+
+function clampTx(s) {
+  // Keep ballroom center reachable — don't let content slide entirely off screen
+  const cw = document.getElementById('cw');
+  const cW = cw.clientWidth, cH = cw.clientHeight;
+  const base = Math.min(cW/1100, cH/700);
+  const offX = (cW-1100*base)/2, offY = (cH-700*base)/2;
+  const contentW = 1100*base*s, contentH = 700*base*s;
+  const margin = Math.min(cW, cH) * 0.25;
+  tx = Math.min(cW - margin, Math.max(margin - contentW, tx));
+  ty = Math.min(cH - margin, Math.max(margin - contentH, ty));
+}
+
 document.getElementById('cw').addEventListener('mousedown',e=>{if(e.target.closest('.a-dot'))return;dr=true;lx=e.clientX;ly=e.clientY;document.getElementById('cw').classList.add('dragging');});
-window.addEventListener('mousemove',e=>{if(!dr)return;tx+=e.clientX-lx;ty+=e.clientY-ly;lx=e.clientX;ly=e.clientY;aT();});
+window.addEventListener('mousemove',e=>{if(!dr)return;tx+=e.clientX-lx;ty+=e.clientY-ly;lx=e.clientX;ly=e.clientY;clampTx(sc);aT();});
 window.addEventListener('mouseup',()=>{dr=false;document.getElementById('cw').classList.remove('dragging');});
-document.getElementById('cw').addEventListener('wheel',e=>{e.preventDefault();sc=Math.min(6,Math.max(0.3,sc*(e.deltaY<0?1.1:0.909)));aT();},{passive:false});
+
+document.getElementById('cw').addEventListener('wheel',e=>{
+  e.preventDefault();
+  const rect=e.currentTarget.getBoundingClientRect();
+  const mx=e.clientX-rect.left, my=e.clientY-rect.top;
+  const oldSc=sc;
+  sc=Math.min(6,Math.max(getMinSc(),sc*(e.deltaY<0?1.1:0.909)));
+  tx=mx-(mx-tx)*(sc/oldSc);
+  ty=my-(my-ty)*(sc/oldSc);
+  clampTx(sc); aT();
+},{passive:false});
+
 function aT(){document.querySelector('svg').style.transform=`translate(${tx}px,${ty}px) scale(${sc})`;document.querySelector('svg').style.transformOrigin='0 0';document.getElementById('zl').textContent=Math.round(sc*100)+'%';}
-function resetV(){sc=1;tx=0;ty=0;document.querySelector('svg').style.transform='';document.getElementById('zl').textContent='100%';}
-function zs(f){sc=Math.min(6,Math.max(0.3,sc*f));aT();}
+
+function resetV(){
+  const cw=document.getElementById('cw');
+  const minSc=getMinSc();
+  sc=minSc;
+  const cW=cw.clientWidth,cH=cw.clientHeight;
+  const base=Math.min(cW/1100,cH/700);
+  const offX=(cW-1100*base)/2,offY=(cH-700*base)/2;
+  const cssCx=offX+549.5*base, cssCy=offY+349.6*base;
+  tx=cW/2-cssCx*sc; ty=cH/2-cssCy*sc;
+  aT();
+}
+
+function zs(f){
+  const cw=document.getElementById('cw');
+  const cx=cw.clientWidth/2, cy=cw.clientHeight/2;
+  const oldSc=sc;
+  sc=Math.min(6,Math.max(getMinSc(),sc*f));
+  tx=cx-(cx-tx)*(sc/oldSc);
+  ty=cy-(cy-ty)*(sc/oldSc);
+  clampTx(sc); aT();
+}
 
 const te=document.getElementById('tip');
 function showTip(e,t){te.textContent=t;te.classList.add('on');mt(e);}
@@ -539,7 +595,7 @@ function fitDots() {
   const baseScale = Math.min(containerW / svgW, containerH / svgH);
   const baseOffsetX = (containerW - svgW * baseScale) / 2;
   const baseOffsetY = (containerH - svgH * baseScale) / 2;
-  const seats = DIG.filter(d => d.label !== 'PW');
+  const seats = DIG;
   const pad = 50;
   const minX = Math.min(...seats.map(d => d.px)) - pad;
   const maxX = Math.max(...seats.map(d => d.px)) + pad;
@@ -551,7 +607,7 @@ function fitDots() {
   const cssCy = svgCy * baseScale + baseOffsetY;
   const cssBoxW = (maxX - minX) * baseScale;
   const cssBoxH = (maxY - minY) * baseScale;
-  sc = Math.min(6, Math.max(0.3, Math.min(containerW / cssBoxW, containerH / cssBoxH)));
+  sc = Math.min(6, Math.max(getMinSc(), Math.min(containerW / cssBoxW, containerH / cssBoxH)));
   tx = containerW / 2 - cssCx * sc;
   ty = containerH / 2 - cssCy * sc;
   aT();
