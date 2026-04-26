@@ -451,100 +451,6 @@ wheels = [
 ]
 
 [[package]]
-name = "datascience-template"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "ipykernel" },
-    { name = "jupyterlab" },
-    { name = "numpy" },
-    { name = "pandas" },
-    { name = "python-dotenv" },
-    { name = "requests" },
-]
-
-[package.optional-dependencies]
-data = [
-    { name = "duckdb" },
-    { name = "polars" },
-    { name = "pyarrow" },
-]
-databases = [
-    { name = "psycopg", extra = ["binary"] },
-    { name = "sqlalchemy" },
-]
-datawrapper = [
-    { name = "datawrapper" },
-]
-diagnostics = [
-    { name = "memory-profiler" },
-    { name = "psutil" },
-]
-geo = [
-    { name = "censusdis" },
-    { name = "folium" },
-    { name = "geopandas" },
-]
-io = [
-    { name = "openpyxl" },
-    { name = "pyyaml" },
-]
-notebooks = [
-    { name = "nbconvert" },
-    { name = "notebook" },
-]
-scraping = [
-    { name = "beautifulsoup4" },
-    { name = "httpx" },
-    { name = "lxml" },
-    { name = "playwright" },
-    { name = "selenium" },
-]
-viz = [
-    { name = "altair" },
-    { name = "ipywidgets" },
-    { name = "matplotlib" },
-    { name = "plotly" },
-    { name = "seaborn" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "altair", marker = "extra == 'viz'", specifier = ">=5.2.0" },
-    { name = "beautifulsoup4", marker = "extra == 'scraping'", specifier = ">=4.12.0" },
-    { name = "censusdis", marker = "extra == 'geo'", specifier = ">=1.4.0" },
-    { name = "datawrapper", marker = "extra == 'datawrapper'", specifier = ">=0.9.0" },
-    { name = "duckdb", marker = "extra == 'data'", specifier = ">=1.0.0" },
-    { name = "folium", marker = "extra == 'geo'", specifier = ">=0.15.0" },
-    { name = "geopandas", marker = "extra == 'geo'", specifier = ">=1.0.0" },
-    { name = "httpx", marker = "extra == 'scraping'", specifier = ">=0.27.0" },
-    { name = "ipykernel", specifier = ">=6.29.0" },
-    { name = "ipywidgets", marker = "extra == 'viz'", specifier = ">=8.1.7" },
-    { name = "jupyterlab", specifier = ">=4.4.5" },
-    { name = "lxml", marker = "extra == 'scraping'", specifier = ">=5.3.0" },
-    { name = "matplotlib", marker = "extra == 'viz'", specifier = ">=3.10.5" },
-    { name = "memory-profiler", marker = "extra == 'diagnostics'", specifier = ">=0.61.0" },
-    { name = "nbconvert", marker = "extra == 'notebooks'", specifier = ">=7.16.4" },
-    { name = "notebook", marker = "extra == 'notebooks'", specifier = ">=7.4.5" },
-    { name = "numpy", specifier = ">=2.3.2" },
-    { name = "openpyxl", marker = "extra == 'io'", specifier = ">=3.1.0" },
-    { name = "pandas", specifier = ">=2.3.1" },
-    { name = "playwright", marker = "extra == 'scraping'", specifier = ">=1.49.0" },
-    { name = "plotly", marker = "extra == 'viz'", specifier = ">=6.2.0" },
-    { name = "polars", marker = "extra == 'data'", specifier = ">=1.0.0" },
-    { name = "psutil", marker = "extra == 'diagnostics'", specifier = ">=6.0.0" },
-    { name = "psycopg", extras = ["binary"], marker = "extra == 'databases'", specifier = ">=3.1.0" },
-    { name = "pyarrow", marker = "extra == 'data'", specifier = ">=18.0.0" },
-    { name = "python-dotenv", specifier = ">=1.0.0" },
-    { name = "pyyaml", marker = "extra == 'io'", specifier = ">=6.0.0" },
-    { name = "requests", specifier = ">=2.32.4" },
-    { name = "seaborn", marker = "extra == 'viz'", specifier = ">=0.13.2" },
-    { name = "selenium", marker = "extra == 'scraping'", specifier = ">=4.25.0" },
-    { name = "sqlalchemy", marker = "extra == 'databases'", specifier = ">=2.0.0" },
-]
-provides-extras = ["viz", "geo", "data", "scraping", "io", "databases", "notebooks", "datawrapper", "diagnostics"]
-
-[[package]]
 name = "datawrapper"
 version = "2.0.16"
 source = { registry = "https://pypi.org/simple" }
@@ -2989,6 +2895,100 @@ sdist = { url = "https://files.pythonhosted.org/packages/2c/41/aa4bf9664e4cda14c
 wheels = [
     { url = "https://files.pythonhosted.org/packages/34/db/b10e48aa8fff7407e67470363eac595018441cf32d5e1001567a7aeba5d2/websocket_client-1.9.0-py3-none-any.whl", hash = "sha256:af248a825037ef591efbf6ed20cc5faa03d3b47b9e5a2230a529eeee1c1fc3ef", size = 82616, upload-time = "2025-10-07T21:16:34.951Z" },
 ]
+
+[[package]]
+name = "whca-graphic"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "ipykernel" },
+    { name = "jupyterlab" },
+    { name = "numpy" },
+    { name = "pandas" },
+    { name = "python-dotenv" },
+    { name = "requests" },
+]
+
+[package.optional-dependencies]
+data = [
+    { name = "duckdb" },
+    { name = "polars" },
+    { name = "pyarrow" },
+]
+databases = [
+    { name = "psycopg", extra = ["binary"] },
+    { name = "sqlalchemy" },
+]
+datawrapper = [
+    { name = "datawrapper" },
+]
+diagnostics = [
+    { name = "memory-profiler" },
+    { name = "psutil" },
+]
+geo = [
+    { name = "censusdis" },
+    { name = "folium" },
+    { name = "geopandas" },
+]
+io = [
+    { name = "openpyxl" },
+    { name = "pyyaml" },
+]
+notebooks = [
+    { name = "nbconvert" },
+    { name = "notebook" },
+]
+scraping = [
+    { name = "beautifulsoup4" },
+    { name = "httpx" },
+    { name = "lxml" },
+    { name = "playwright" },
+    { name = "selenium" },
+]
+viz = [
+    { name = "altair" },
+    { name = "ipywidgets" },
+    { name = "matplotlib" },
+    { name = "plotly" },
+    { name = "seaborn" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "altair", marker = "extra == 'viz'", specifier = ">=5.2.0" },
+    { name = "beautifulsoup4", marker = "extra == 'scraping'", specifier = ">=4.12.0" },
+    { name = "censusdis", marker = "extra == 'geo'", specifier = ">=1.4.0" },
+    { name = "datawrapper", marker = "extra == 'datawrapper'", specifier = ">=0.9.0" },
+    { name = "duckdb", marker = "extra == 'data'", specifier = ">=1.0.0" },
+    { name = "folium", marker = "extra == 'geo'", specifier = ">=0.15.0" },
+    { name = "geopandas", marker = "extra == 'geo'", specifier = ">=1.0.0" },
+    { name = "httpx", marker = "extra == 'scraping'", specifier = ">=0.27.0" },
+    { name = "ipykernel", specifier = ">=6.29.0" },
+    { name = "ipywidgets", marker = "extra == 'viz'", specifier = ">=8.1.7" },
+    { name = "jupyterlab", specifier = ">=4.4.5" },
+    { name = "lxml", marker = "extra == 'scraping'", specifier = ">=5.3.0" },
+    { name = "matplotlib", marker = "extra == 'viz'", specifier = ">=3.10.5" },
+    { name = "memory-profiler", marker = "extra == 'diagnostics'", specifier = ">=0.61.0" },
+    { name = "nbconvert", marker = "extra == 'notebooks'", specifier = ">=7.16.4" },
+    { name = "notebook", marker = "extra == 'notebooks'", specifier = ">=7.4.5" },
+    { name = "numpy", specifier = ">=2.3.2" },
+    { name = "openpyxl", marker = "extra == 'io'", specifier = ">=3.1.0" },
+    { name = "pandas", specifier = ">=2.3.1" },
+    { name = "playwright", marker = "extra == 'scraping'", specifier = ">=1.49.0" },
+    { name = "plotly", marker = "extra == 'viz'", specifier = ">=6.2.0" },
+    { name = "polars", marker = "extra == 'data'", specifier = ">=1.0.0" },
+    { name = "psutil", marker = "extra == 'diagnostics'", specifier = ">=6.0.0" },
+    { name = "psycopg", extras = ["binary"], marker = "extra == 'databases'", specifier = ">=3.1.0" },
+    { name = "pyarrow", marker = "extra == 'data'", specifier = ">=18.0.0" },
+    { name = "python-dotenv", specifier = ">=1.0.0" },
+    { name = "pyyaml", marker = "extra == 'io'", specifier = ">=6.0.0" },
+    { name = "requests", specifier = ">=2.32.4" },
+    { name = "seaborn", marker = "extra == 'viz'", specifier = ">=0.13.2" },
+    { name = "selenium", marker = "extra == 'scraping'", specifier = ">=4.25.0" },
+    { name = "sqlalchemy", marker = "extra == 'databases'", specifier = ">=2.0.0" },
+]
+provides-extras = ["viz", "geo", "data", "scraping", "io", "databases", "notebooks", "datawrapper", "diagnostics"]
 
 [[package]]
 name = "widgetsnbextension"
