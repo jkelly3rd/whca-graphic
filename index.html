@@ -51,8 +51,8 @@ svg{display:block;width:100%;height:100%;}
 <body>
 <header>
   <div>
-    <div class="h-title">Top officials locations at WHCA Dinner 2026</div>
-    <div class="h-sub">Washington Hilton · International Ballroom · April 25<br>Click <span style="color:#1a3356;font-weight:700;">blue</span> (Admin/Congress) or <span style="color:#8c1c1c;font-weight:700;">red</span> (POTUS/VP) dots for detail.</div>
+    <div class="h-title">Top officials' seats at WHCA Dinner 2026</div>
+    <div class="h-sub">Washington Hilton International Ballroom · April 25<br>Click <span style="color:#1a3356;font-weight:700;">blue</span> (Admin/Congress) or <span style="color:#8c1c1c;font-weight:700;">red</span> (POTUS/VP) dots for detail.</div>
   </div>
   <div class="h-r">
     <button class="btn" onclick="resetV()">Reset</button>
@@ -463,7 +463,7 @@ function drawAnnotations() {
     core.setAttribute('cx', d.px); core.setAttribute('cy', d.py); core.setAttribute('r', 5.5);
     core.setAttribute('fill', d.color); core.setAttribute('stroke', '#fff'); core.setAttribute('stroke-width', '1.6');
     grp.appendChild(core);
-    grp.addEventListener('mouseenter', e => showTip(e, d.name));
+    grp.addEventListener('mouseenter', e => showTip(e, d.name.replace(/^Sec\.\s+/,'').replace(/^Rep\.\s+/,'').replace(/^Sen\.\s+/,'')));
     grp.addEventListener('mouseleave', hideTip);
     grp.addEventListener('click', e => { e.stopPropagation(); openPanel(d); });
     g.appendChild(grp);
