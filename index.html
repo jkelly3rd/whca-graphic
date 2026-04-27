@@ -52,7 +52,7 @@ svg{display:block;width:100%;height:100%;}
 <header>
   <div>
     <div class="h-title">Top officials' seats at WHCA Dinner 2026</div>
-    <div class="h-sub">Washington Hilton International Ballroom · April 25<br>Click <span style="color:#1a3356;font-weight:700;">blue</span> (Admin/Congress) or <span style="color:#8c1c1c;font-weight:700;">red</span> (POTUS/VP) dots for detail.</div>
+    <div class="h-sub">Washington Hilton International Ballroom · April 25<br>Click <span style="color:#1a3356;font-weight:700;">blue</span> (Admin/Congress), <span style="color:#8c1c1c;font-weight:700;">red</span> (POTUS/VP) or <span style="color:#7e22ce;font-weight:700;">purple</span> (Suspect) dots for detail.</div>
   </div>
   <div class="h-r">
     <button class="btn" onclick="resetV()">Reset</button>
@@ -63,7 +63,7 @@ svg{display:block;width:100%;height:100%;}
 </header>
 
 <div class="cw" id="cw">
-<svg viewBox="0 0 1100 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+<svg viewBox="0 0 1100 735" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
 <defs>
   <pattern id="d1" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="11" cy="11" r="0.7" fill="#b4b2aa"/></pattern>
   <filter id="fs" x="-5%" y="-5%" width="110%" height="110%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12"/></filter>
@@ -80,7 +80,7 @@ svg{display:block;width:100%;height:100%;}
   fill="none" stroke="#b8b2a4" stroke-width="0.9" stroke-dasharray="3,4"/>
 
 <line x1="262.1" y1="69.2" x2="438.9" y2="69.2" stroke="#a89060" stroke-width="2.5" stroke-dasharray="4,3" opacity="0.85" pointer-events="none"/>
-<text x="339.2" y="76.4" font-family="var(--f)" font-size="8.5" font-weight="600" fill="#7a6840" text-anchor="middle" letter-spacing="0.06em" pointer-events="none">PRESIDENT'S WALK</text>
+<text x="339.2" y="83" font-family="var(--f)" font-size="9.5" font-weight="500" fill="#1a2c14" text-anchor="middle" letter-spacing="0.04em" pointer-events="none">PRESIDENT'S WALK</text>
 
 <!-- Head table — gold rectangle alone, no label inside -->
 <rect x="407" y="108" width="278" height="22" rx="2"
@@ -101,7 +101,7 @@ svg{display:block;width:100%;height:100%;}
   <text x="0" y="31" font-family="var(--f)" font-size="11" font-weight="500" fill="#1a2c14" text-anchor="middle" letter-spacing="0.04em">FOYER ENTRANCE</text>
 </g>
 
-<g onmouseenter="showTip(event,'Main Entrance — Concourse Foyer')" onmouseleave="hideTip()" transform="translate(534,621)">
+<g onmouseenter="showTip(event,'Main Entrance — Concourse Foyer')" onmouseleave="hideTip()" transform="translate(541,621)">
   <line x1="-36" y1="-1" x2="-36" y2="7" stroke="#587848" stroke-width="1.8"/>
   <line x1="36" y1="-1" x2="36" y2="7" stroke="#587848" stroke-width="1.8"/>
   <line x1="-36" y1="0" x2="36" y2="0" stroke="#587848" stroke-width="1.4"/>
@@ -491,14 +491,15 @@ svg{display:block;width:100%;height:100%;}
 
 <g id="l-annot"></g>
 
-<text x="30" y="662" font-family="var(--f)" font-size="11" font-weight="600" fill="#3e3e38" letter-spacing="0.01em">245 × 145 ft · 29,631 sq ft</text>
-<g transform="translate(30,678)">
-  <line x1="0" y1="0" x2="80" y2="0" stroke="#5a5a52" stroke-width="1.2"/>
-  <line x1="0" y1="-3" x2="0" y2="3" stroke="#5a5a52" stroke-width="1.2"/>
-  <line x1="80" y1="-3" x2="80" y2="3" stroke="#5a5a52" stroke-width="1.2"/>
-  <text x="92" y="3" font-family="var(--f)" font-size="8.5" fill="#5a5a52">50 ft</text>
+<text x="338" y="685" font-family="var(--f)" font-size="8.5" font-weight="500" fill="#1a2c14" text-anchor="middle" letter-spacing="0.04em" pointer-events="none">SUSPECT STOPPED ON FLOOR ABOVE BALLROOM NEAR STAIRS</text>
+<g transform="translate(30,701)">
+  <line x1="0" y1="0" x2="80" y2="0" stroke="#3e3e38" stroke-width="1.7"/>
+  <line x1="0" y1="-4" x2="0" y2="4" stroke="#3e3e38" stroke-width="1.7"/>
+  <line x1="80" y1="-4" x2="80" y2="4" stroke="#3e3e38" stroke-width="1.7"/>
+  <text x="92" y="4" font-family="var(--f)" font-size="9.5" font-weight="500" fill="#3e3e38">50 ft</text>
 </g>
-<text x="30" y="692" font-family="var(--f)" font-size="7.5" fill="#86867e" letter-spacing="0.04em">GRAPHIC BY JOHN KELLY / CBS NEWS     SOURCE: CBS NEWS RESEARCH · WHITE HOUSE CORRESPONDENTS' ASSOCIATION · HILTON HOTELS</text>
+<text x="30" y="717" font-family="var(--f)" font-size="8.5" fill="#5a5a52" letter-spacing="0.04em">BALLROOM: 245 × 145 FT · 29,631 SQ FT</text>
+<text x="30" y="730" font-family="var(--f)" font-size="8.5" fill="#86867e" letter-spacing="0.04em">GRAPHIC BY JOHN KELLY / CBS NEWS     SOURCE: CBS NEWS RESEARCH · WHITE HOUSE CORRESPONDENTS' ASSOCIATION · HILTON HOTELS</text>
 
 </svg>
 </div>
@@ -521,7 +522,7 @@ const DIG = [
   {px:460.0,py:119.4,label:"Leavitt",name:"Karoline Leavitt",role:"White House Press Secretary · Head Table",color:"#1a3356",guests:[],caption:"White House Press Secretary Karoline Leavitt was seated at the head table, two seats to the left of President Trump.",pk:["karoline_leavitt_1","karoline_leavitt_2"],cr:["Getty Images","Getty Images"]},
   {px:516.0,py:119.4,label:"POTUS",name:"President Trump",role:"President of the United States \u00b7 Head Table",color:"#8c1c1c",guests:["Melania Trump (First Lady)", "Weijia Jiang (WHCA President; CBS News White House Correspondent)", "White House Press Secretary Karoline Leavitt"],caption:"President Trump attended the dinner for the first time in either of his two presidencies.",pk:["trump_melania", "potus_dais", "potus_stage", "head_table_close"],cr:["Getty Images", "Getty Images", "Getty Images", "Getty Images"]},
   {px:588.5,py:119.4,label:"VP",name:"Vice President Vance",role:"Vice President \u00b7 Head Table",color:"#8c1c1c",guests:[],caption:"VP JD Vance photographed in the President's Walk corridor before the dinner.",pk:["vance_presidents_walk", "vp"],cr:["Getty Images", "Getty Images"]},
-  {px:339.2,py:63.4,label:"PW",name:"President's Walk",role:"Alternative arrival & evacuation corridor",color:"#8c1c1c",guests:[],caption:"Vice President JD Vance is pictured walking through the President's Walk corridor, lined with portraits of past presidents and first ladies. The President's Walk is the alternative entrance used by high-level dignitaries, staff and security details.",pk:["vance_presidents_walk"],cr:["Getty Images"]},
+  {px:339.2,py:61.4,label:"PW",name:"President's Walk",role:"Alternative arrival & evacuation corridor",color:"#8c1c1c",guests:[],caption:"Vice President JD Vance is pictured walking through the President's Walk corridor, lined with portraits of past presidents and first ladies. The President's Walk is the alternative entrance used by high-level dignitaries, staff and security details.",pk:["vance_presidents_walk"],cr:["Getty Images"]},
   {px:566.4,py:223.6,label:"RFK Jr.",name:"Sec. Robert F. Kennedy Jr.",role:"Secretary of Health and Human Services \u00b7 Table 91",color:"#1a3356",guests:["Cheryl Hines (spouse)"],caption:"Secretary of HHS, attending with wife Cheryl Hines. Pictured being evacuated by Secret Service after a security incident outside the hotel.",pk:["rfk_evac1", "rfk_corridor"],cr:["Getty Images", "Getty Images"]},
   {px:581.6,py:223.6,label:"S. Miller",name:"Stephen Miller",role:"White House Deputy Chief of Staff for Policy \u00b7 Table 91",color:"#1a3356",guests:["Katie Miller (spouse)"],caption:"White House Deputy Chief of Staff for Policy, attending with wife Katie. Pictured with Pete and Jennifer Hegseth, who were at an adjacent table.",pk:["stephen_miller", "hegseth_millers", "miller_evac"],cr:["Getty Images", "Getty Images", "Getty Images"]},
   {px:601.8,py:224.5,label:"Hassett",name:"Kevin Hassett",role:"Director, National Economic Council \u00b7 Table 110",color:"#1a3356",guests:[],caption:"Director of the National Economic Council.",pk:["hassett_1"],cr:["Getty Images"]},
@@ -544,7 +545,8 @@ const DIG = [
   {px:677.4,py:304.0,label:"McMahon",name:"Linda McMahon",role:"Secretary of Education \u00b7 Table 130",color:"#1a3356",guests:[],caption:"Secretary of Education Linda McMahon.",pk:["mcmahon_1"],cr:["Getty Images"]},
   {px:372.7,py:371.7,label:"Johnson",name:"Mike Johnson",role:"Speaker of the House \u00b7 Table 35",color:"#1a3356",guests:[],caption:"House Speaker Mike Johnson.",pk:["mike-johnson"],cr:["Getty Images"]},
   {px:677.4,py:155.3,label:"Mullin",name:"Markwayne Mullin",role:"Secretary of Homeland Security \u00b7 Table 135",color:"#1a3356",guests:[],caption:"Secretary of Homeland Security Markwayne Mullin.",pk:["mullin_1","mullin_2"],cr:["Getty Images","Getty Images"]},
-  {px:713.7,py:215.5,label:"Gabbard",name:"Tulsi Gabbard",role:"Director of National Intelligence \u00b7 Table 138",color:"#1a3356",guests:[],caption:"Director of National Intelligence Tulsi Gabbard.",pk:["tulsi-gabbard"],cr:["Getty Images"]}
+  {px:713.7,py:215.5,label:"Gabbard",name:"Tulsi Gabbard",role:"Director of National Intelligence \u00b7 Table 138",color:"#1a3356",guests:[],caption:"Director of National Intelligence Tulsi Gabbard.",pk:["tulsi-gabbard"],cr:["Getty Images"]},
+  {px:400,py:665,label:"Suspect",name:"Suspected shooter stopped by security.",role:"Left staircase checkpoint \u00b7 Main Entrance level",color:"#7e22ce",guests:[],caption:"Suspect stopped by security near the checkpoint at the top of this staircase.",pk:["suspect_1","suspect_2"],cr:["Getty Images","Getty Images"]}
 ];
 
 function drawAnnotations() {
@@ -553,7 +555,7 @@ function drawAnnotations() {
   DIG.forEach(d => {
     const grp = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     grp.setAttribute('class', 'a-dot');
-    if (d.label === 'POTUS') {
+    if (d.label === 'POTUS' || d.label === 'Suspect') {
       const pulse = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
       pulse.setAttribute('cx', d.px); pulse.setAttribute('cy', d.py); pulse.setAttribute('r', 7);
       pulse.setAttribute('fill', 'none'); pulse.setAttribute('stroke', d.color); pulse.setAttribute('stroke-width', '2');
@@ -567,13 +569,14 @@ function drawAnnotations() {
       pulse.appendChild(animR); pulse.appendChild(animO);
       grp.appendChild(pulse);
     }
+    const isLarge = d.label === 'PW' || d.label === 'Suspect';
     const halo = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    halo.setAttribute('cx', d.px); halo.setAttribute('cy', d.py); halo.setAttribute('r', 11);
+    halo.setAttribute('cx', d.px); halo.setAttribute('cy', d.py); halo.setAttribute('r', isLarge ? 15 : 11);
     halo.setAttribute('fill', d.color); halo.setAttribute('opacity', '0.22');
     grp.appendChild(halo);
     const core = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     core.setAttribute('class', 'a-core');
-    core.setAttribute('cx', d.px); core.setAttribute('cy', d.py); core.setAttribute('r', 5.5);
+    core.setAttribute('cx', d.px); core.setAttribute('cy', d.py); core.setAttribute('r', isLarge ? 7.5 : 5.5);
     core.setAttribute('fill', d.color); core.setAttribute('stroke', '#fff'); core.setAttribute('stroke-width', '1.6');
     grp.appendChild(core);
     grp.addEventListener('mouseenter', e => showTip(e, d.name.replace(/^Sec\.\s+/,'').replace(/^Rep\.\s+/,'').replace(/^Sen\.\s+/,'')));
@@ -763,7 +766,7 @@ document.addEventListener('keydown', e => {
 </script>
 
 <script>
-const PHOTOS = {"karoline_leavitt_1": "images/karoline-leavitt-1.jpg", "karoline_leavitt_2": "images/karoline-leavitt-2.jpg","vp": "images/vp.jpg", "potus_dais": "images/potus_dais.jpg", "potus_stage": "images/potus_stage.jpg", "wide_room": "images/wide_room.jpg", "evacuation": "images/evacuation.jpg", "presidents_walk": "images/presidents_walk.webp", "room_wide2": "images/room_wide2.jpg", "head_table_close": "images/head_table_close.jpg", "room_overview": "images/room_overview.jpg", "stephen_miller": "images/stephen_miller.jpg", "trump_melania": "images/trump_melania.jpg", "vance_backstage": "images/vance_backstage.jpg", "hegseth_couple": "images/hegseth_couple.jpg", "hegseth_stage": "images/hegseth_stage.jpg", "hegseth_millers": "images/hegseth_millers.jpg", "blanche_couple": "images/blanche_couple.jpg", "blanche_table": "images/blanche_table.jpg", "blanche_security": "images/blanche_security.jpg", "rfk_evac1": "images/rfk_evac1.jpg", "rfk_evac2": "images/rfk_evac2.jpg", "rfk_corridor": "images/rfk_corridor.jpg", "miller_evac": "images/miller_evac.jpg", "evac_chairs": "images/evac_chairs.jpg", "vance_presidents_walk": "images/vance_presidents_walk.jpg", "scavino_couple": "images/scavino_couple.jpg", "oz_1": "images/dr-oz-1.jpg", "oz_2": "images/dr-oz-2.jpg", "bessent_1": "images/Scott-Bessent-1.jpg", "bessent_2": "images/Scott-Bessent-2.jpg", "bessent_3": "images/Scott-Bessent-3.jpg", "zeldin_1": "images/lee-zeldin-1.jpg", "zeldin_2": "images/lee-zeldin-2.jpg", "mcmahon_1": "images/Linda-McMahon.jpg", "rubio_1": "images/marco-rubio-1.jpg", "rubio_2": "images/marco-rubio-2.jpg", "crowley_1": "images/monica-crowley.jpg", "waltz_1": "images/mike-walz.jpg", "dan_scavino": "images/dan-scavino.jpg", "scalise_1": "images/stevep-scalise.jpg", "kash_patel": "images/kash-patel.jpg", "kash_patel_2": "images/kash-patel-2.jpg", "kash_patel_3": "images/kash-patel-3.jpg", "kash_patel_4": "images/kash-patel-4.jpg", "hassett_1": "images/kevin-hassett.jpg", "ferguson_1": "images/andrew-ferguson.jpg", "driscoll_1": "images/dan-driscoll.jpg", "isaacman_1": "images/jared-isaacman.jpg", "makary_1": "images/marty-makary.jpg", "greer_1": "images/jamieson-greer.jpg", "mullin_1": "images/Markwayne-Millin.jpg", "mullin_2": "images/Millin-2.jpg"};
+const PHOTOS = {"karoline_leavitt_1": "images/karoline-leavitt-1.jpg", "karoline_leavitt_2": "images/karoline-leavitt-2.jpg","vp": "images/vp.jpg", "potus_dais": "images/potus_dais.jpg", "potus_stage": "images/potus_stage.jpg", "wide_room": "images/wide_room.jpg", "evacuation": "images/evacuation.jpg", "presidents_walk": "images/presidents_walk.webp", "room_wide2": "images/room_wide2.jpg", "head_table_close": "images/head_table_close.jpg", "room_overview": "images/room_overview.jpg", "stephen_miller": "images/stephen_miller.jpg", "trump_melania": "images/trump_melania.jpg", "vance_backstage": "images/vance_backstage.jpg", "hegseth_couple": "images/hegseth_couple.jpg", "hegseth_stage": "images/hegseth_stage.jpg", "hegseth_millers": "images/hegseth_millers.jpg", "blanche_couple": "images/blanche_couple.jpg", "blanche_table": "images/blanche_table.jpg", "blanche_security": "images/blanche_security.jpg", "rfk_evac1": "images/rfk_evac1.jpg", "rfk_evac2": "images/rfk_evac2.jpg", "rfk_corridor": "images/rfk_corridor.jpg", "miller_evac": "images/miller_evac.jpg", "evac_chairs": "images/evac_chairs.jpg", "vance_presidents_walk": "images/vance_presidents_walk.jpg", "scavino_couple": "images/scavino_couple.jpg", "oz_1": "images/dr-oz-1.jpg", "oz_2": "images/dr-oz-2.jpg", "bessent_1": "images/Scott-Bessent-1.jpg", "bessent_2": "images/Scott-Bessent-2.jpg", "bessent_3": "images/Scott-Bessent-3.jpg", "zeldin_1": "images/lee-zeldin-1.jpg", "zeldin_2": "images/lee-zeldin-2.jpg", "mcmahon_1": "images/Linda-McMahon.jpg", "rubio_1": "images/marco-rubio-1.jpg", "rubio_2": "images/marco-rubio-2.jpg", "crowley_1": "images/monica-crowley.jpg", "waltz_1": "images/mike-walz.jpg", "dan_scavino": "images/dan-scavino.jpg", "scalise_1": "images/stevep-scalise.jpg", "kash_patel": "images/kash-patel.jpg", "kash_patel_2": "images/kash-patel-2.jpg", "kash_patel_3": "images/kash-patel-3.jpg", "kash_patel_4": "images/kash-patel-4.jpg", "hassett_1": "images/kevin-hassett.jpg", "ferguson_1": "images/andrew-ferguson.jpg", "driscoll_1": "images/dan-driscoll.jpg", "isaacman_1": "images/jared-isaacman.jpg", "makary_1": "images/marty-makary.jpg", "greer_1": "images/jamieson-greer.jpg", "mullin_1": "images/Markwayne-Millin.jpg", "mullin_2": "images/Millin-2.jpg", "mike-johnson": "images/mike-johnson.jpg", "tulsi-gabbard": "images/tulsi-gabbard.jpg", "suspect_1": "images/suspect-1.jpg", "suspect_2": "images/suspect-2.jpg"};
 </script>
 
 </body>
