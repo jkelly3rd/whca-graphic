@@ -569,7 +569,7 @@ function drawAnnotations() {
       pulse.appendChild(animR); pulse.appendChild(animO);
       grp.appendChild(pulse);
     }
-    const isLarge = d.label === 'PW' || d.label === 'Suspect';
+    const isLarge = d.label === 'PW' || d.label === 'Suspect' || d.label === 'POTUS';
     const halo = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     halo.setAttribute('cx', d.px); halo.setAttribute('cy', d.py); halo.setAttribute('r', isLarge ? 15 : 11);
     halo.setAttribute('fill', d.color); halo.setAttribute('opacity', '0.22');
